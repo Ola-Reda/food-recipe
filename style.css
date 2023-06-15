@@ -114,16 +114,26 @@ h1, h2, h3, h4 {
     margin-top: 20px;
 }
 /*start meals details*/
+.backdrop{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    display: none;
+}
 .box .meals-details {
     position: fixed;
     top: 10%;
-    left: 25%;
-    background-color: #672d2ceb;
+    left: 8%;
+    background-color: #672d2c;
     color: white;
     border-radius: 20px;
     padding: 30px;
-    width: 60%;
+    width: 85%;
     height: 85%;
+    z-index: 30;
     overflow-y: scroll;
     display: none;
 }
@@ -191,5 +201,6 @@ h1, h2, h3, h4 {
 @media (min-width: 992px) {
     .box .meals-details {
         width: 650px;
+        left: 25%;
     }
 }

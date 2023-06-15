@@ -3,10 +3,16 @@ let boxItems = document.querySelector(".meals");
 let closeBtn = document.querySelector(".close-btn");
 let mealsDetails = document.querySelector(".meals-details");
 let detailsContent = document.querySelector(".details-content");
+let backdrop = document.querySelector(".backdrop");
 
 //close details
 closeBtn.addEventListener("click", () => {
     mealsDetails.style.display = "none";
+    backdrop.style.display = "none";
+})
+backdrop.addEventListener("click", () => {
+    mealsDetails.style.display = "none";
+    backdrop.style.display = "none";
 })
 
 //get all meals with matched ingredients
@@ -63,4 +69,5 @@ function getRecipe(id) {
         `
     })
     mealsDetails.style.display = "block";
+    backdrop.style.display = "block";
 }
