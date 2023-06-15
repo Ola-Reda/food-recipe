@@ -32,10 +32,10 @@ function getMeals(e) {
                     </div>
                 `
             })
-            boxItems.style.gridTemplateColumns = "repeat(3, 1fr)"
+            boxItems.classList.remove("area");
         } else {
             drawMeals = `<div class="no-meals"> Sorry we didn't have any meals </div>`
-            boxItems.style.gridTemplateColumns = "1fr";
+            boxItems.classList.add("area");
         }
         boxItems.innerHTML = drawMeals;
     });

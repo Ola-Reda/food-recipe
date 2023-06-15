@@ -104,6 +104,9 @@ h1, h2, h3, h4 {
 }
 /*end meals*/
 /*class there is no meals*/
+.area {
+    grid-template-columns: 1fr !important;
+}
 .no-meals {
     color: var(--main-color);
     font-size: 20px;
