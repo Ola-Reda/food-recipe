@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="get the ingredients and instructions of meals">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Recipe</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <!--start title-->
+                <div class="title-box">
+                    <h1>Find Meals For Your Ingredients</h1>
+                    <p>Real food doesn't have ingredients, real food is ingredients.</p>
+                    <span>Jamie Oliver</span>
+                </div>
+                <!--end title-->
+                <!--start search box-->
+                <form class="search-box">
+                    <input type="text" class="search-input" placeholder="Enter an ingredient" name="ingredient-name">
+                    <button type="submit" class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+                <!--end search box-->
+                <!--start meals-->
+                <div class="box-meals">
+                    <h2>Your Search Results:</h2>
+                    <div class="meals">
+                    </div>
+                </div>
+                <!--end meals-->
+                <!--start meals details-->
+                <div class="meals-details">
+                    <button class="close-btn">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <div class="details-content">
+                    </div>
+                </div>
+                <!--end meals details-->
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
