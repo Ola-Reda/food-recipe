@@ -188,6 +188,34 @@ h1, h2, h3, h4 {
     opacity: .6;
 }
 /*end meals details*/
+/*start loader*/
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    display: none;
+}
+.loader::after {
+    content: '';
+    position: absolute;
+    border: 8px solid #dddddd;
+    border-left-color: var(--main-color);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    animation: loading .8s linear infinite;
+}
+@keyframes loading {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*end loader*/
 @media (max-width: 992px) {
     .box .box-meals .meals {
         grid-template-columns: repeat(2, 1fr);

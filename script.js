@@ -1,9 +1,10 @@
-let searchBtn = document.querySelector(".search-btn");
-let boxItems = document.querySelector(".meals");
-let closeBtn = document.querySelector(".close-btn");
-let mealsDetails = document.querySelector(".meals-details");
-let detailsContent = document.querySelector(".details-content");
-let backdrop = document.querySelector(".backdrop");
+const searchBtn = document.querySelector(".search-btn");
+const boxItems = document.querySelector(".meals");
+const closeBtn = document.querySelector(".close-btn");
+const mealsDetails = document.querySelector(".meals-details");
+const detailsContent = document.querySelector(".details-content");
+const backdrop = document.querySelector(".backdrop");
+const loader = document.querySelector('.loader')
 
 //close details
 closeBtn.addEventListener("click", () => {
@@ -19,6 +20,7 @@ backdrop.addEventListener("click", () => {
 searchBtn.addEventListener("click", getMeals);
 function getMeals(e) {
     e.preventDefault();
+    loader.style.display = "block";
     let searchInput = document.querySelector(".search-input").value;
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInput}`)
     .then(response => response.json())
@@ -39,9 +41,11 @@ function getMeals(e) {
                 `
             })
             boxItems.classList.remove("area");
+            loader.style.display = "none";
         } else {
             drawMeals = `<div class="no-meals"> Sorry we didn't have any meals </div>`
             boxItems.classList.add("area");
+            loader.style.display = "none";
         }
         boxItems.innerHTML = drawMeals;
     });
