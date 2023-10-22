@@ -234,6 +234,6 @@ h1, h2, h3, h4 {
 }
 @media (max-width: 768px) {
     .box .search-box input {
-        padding: 13px 22px;
+        padding: 15px 22px;
     }
 }
