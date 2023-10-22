@@ -232,3 +232,8 @@ h1, h2, h3, h4 {
         left: 25%;
     }
 }
+@media (max-width: 768px) {
+    .box .search-box input {
+        padding: 13px 22px;
+    }
+}
